@@ -22,7 +22,8 @@ define( 'DB_HOST', '${DB_HOST}' );
 define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );
 
-/* --- Redis Cache Integration (Bonus) --- */
+/* Bonus  --- REDIS Cache Integration --- FICHIER DE CONF AVEC CONNEXION AU SERVICE REDIS SUR PORT 6379 */
+
 define( 'WP_REDIS_HOST', 'redis' );
 define( 'WP_REDIS_PORT', 6379 );
 define( 'WP_CACHE', true );
@@ -64,6 +65,9 @@ else
 fi
 
 echo "PHP-FPM engine starting..."
+
+# PLUGIN DE COMMUNICATION WORDPRESS-REDIS en CACHE
 wp plugin install redis-cache --activate --allow-root || true
 wp redis enable --allow-root || true
+
 exec php-fpm8.2 -F

@@ -1,6 +1,7 @@
 FROM debian:bookworm
 
-RUN apt-get update && apt-get install -y mariadb-server
+RUN apt-get update && \
+    apt-get install -y mariadb-server
 RUN rm -rf /var/lib/mysql/*
 
 EXPOSE 3306

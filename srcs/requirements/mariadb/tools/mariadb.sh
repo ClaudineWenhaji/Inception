@@ -6,7 +6,7 @@ if [ ! -d "/var/lib/mysql/mysql" ]; then
 	# create basic mariadb's base system tables
 	mariadb-install-db --user=mysql --datadir=/var/lib/mysql
 
-	# start temp. server
+	# start temporary server
 	mysqld_safe --datadir=/var/lib/mysql &
 
 	# wait until server ping response
