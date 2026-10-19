@@ -2,6 +2,10 @@
 
 set -e
 
+export DB_PASSWORD=$(cat /run/secrets/db_user_password)
+export WP_ADMIN_PASSWORD=$(cat /run/secrets/wp_admin_password)
+export WP_USER_PASSWORD=$(cat /run/secrets/wp_user_password)
+
 echo "Waiting for MariaDB to be ready..."
 until mysqladmin ping -h "$DB_HOST" -u "$DB_USER" -p"$DB_PASSWORD" --silent; do
     echo "Failed to connect to MariaDB ($DB_HOST), will try again in 2 seconds..."

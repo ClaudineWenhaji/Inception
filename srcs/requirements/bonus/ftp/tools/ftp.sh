@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Lecture du secret Docker pour le FTP
+export FTP_PASSWORD=$(cat /run/secrets/ftp_user_password)
+
 # Création de l'utilisateur FTP s'il n'existe pas
 if ! id "$FTP_USER" >/dev/null 2>&1; then
     useradd -m -d /var/www/html -s /bin/bash "$FTP_USER"

@@ -1,5 +1,10 @@
 #!/bin/bash
 set -e
+
+# Lecture des secrets Docker injectés par le docker-compose
+export MYSQL_ROOT_PASSWORD=$(cat /run/secrets/db_root_password)
+export MYSQL_PASSWORD=$(cat /run/secrets/db_user_password)
+
 if [ ! -d "/var/lib/mysql/mysql" ]; then
 	echo "first run for MariaDB, database is being set up..."
 
@@ -39,9 +44,5 @@ else
 
 fi
 
-# This command will work in all cases (both the first and the next installation).
 echo "starting MariaDB server..."
-
-# The exec command "replaces" this script with the mysqld process.
-# This will make mysqld the container's parent process (PID 1).
 exec mysqld_safe --datadir=/var/lib/mysql
