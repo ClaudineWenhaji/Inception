@@ -1,11 +1,11 @@
-services:
+services:              # precise les differents services (images) a utiliser
 
   nginx:
     build:
       context: ./requirements/nginx
     image: nginx
     container_name: nginx
-    restart: always
+    restart: always   # permet de redemarrer automatiquement le container en cas de crash
     depends_on:
       - wordpress
     ports:
