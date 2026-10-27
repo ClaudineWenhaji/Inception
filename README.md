@@ -41,7 +41,7 @@ The main objective is to design, configure, and deploy an isolated multi-contain
                         |                                                 |
                         |  +-----------------+     +-------------------+  |
                         |  | FTP Container   |     | cAdvisor / Static |  |
-                        |  | (Port 21 / PASV)|     | (Port 8081 / 80)  |  |
+                        |  | (Port 21 / PASV)|     | (Port 8081 / 8082)|  |
                         |  +-----------------+     +-------------------+  |
                         +-------------------------------------------------+
 ```
@@ -71,7 +71,7 @@ The main objective is to design, configure, and deploy an isolated multi-contain
 ## Instructions
 
 ### Prerequisites
-* Operating System: Debian or Ubuntu Virtual Machine.
+* Operating System: Debian.
 * Tools: `docker`, `docker compose`, `make`, `sudo`.
 * Network domain setup: Map `clwenhaj.42.fr` to `127.0.0.1` in your `/etc/hosts` file:
   ```bash
@@ -81,7 +81,7 @@ The main objective is to design, configure, and deploy an isolated multi-contain
 ### Quick Start
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/username/inception.orig.git inception
+   git clone https://github.com/username/Inception.git inception
    cd inception
    ```
 
@@ -118,7 +118,7 @@ The main objective is to design, configure, and deploy an isolated multi-contain
 * [MariaDB Knowledge Base](https://mariadb.com/kb/en/)
 
 ### AI Usage Disclosure
-Artificial Intelligence (Gemini / ChatGPT) was used in accordance with 42 AI guidelines for:
+Artificial Intelligence was used in accordance with 42 AI guidelines for:
 * **Debugging & Syntax Check:** Diagnostic assistance for shell script syntax (`tools/mariadb.sh`, `tools/wordpress.sh`) and Docker Compose volume binding rules.
 * **Architecture Validation:** Clarifying Docker secret mounting mechanisms (`/run/secrets/`) and PID 1 entrypoint best practices.
 * **Documentation Formatting:** Structuring technical comparisons and Markdown templates.

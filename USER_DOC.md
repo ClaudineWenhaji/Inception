@@ -11,7 +11,7 @@ This guide provides end users and administrators with simple instructions on how
 | **WordPress Website** | Main Web Application & Blog | `https://clwenhaj.42.fr` |
 | **WordPress Admin** | WP Dashboard & Management | `https://clwenhaj.42.fr/wp-admin` |
 | **Adminer** | Database Web Interface | `http://clwenhaj.42.fr:8080` |
-| **Static Site** | Showcase Bonus Website | `http://clwenhaj.42.fr:80` |
+| **Static Site** | Showcase Bonus Website | `http://clwenhaj.42.fr:8082` |
 | **cAdvisor** | Resource & Metric Monitoring | `http://clwenhaj.42.fr:8081` |
 | **FTP Server** | Remote File Access to WP Files | `ftp://clwenhaj.42.fr:21` |
 

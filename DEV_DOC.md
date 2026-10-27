@@ -7,7 +7,7 @@ This document is intended for developers maintaining, extending, or testing the 
 ## Environment Setup & Prerequisites
 
 ### Required Tools
-Ensure the host operating system (Debian/Ubuntu VM) has the following packages installed:
+Ensure the host operating system (Debian) has the following packages installed:
 ```bash
 sudo apt update && sudo apt install -y docker.io docker-buildx-plugin docker-compose-plugin make curl git
 ```

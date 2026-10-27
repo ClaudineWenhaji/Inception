@@ -104,8 +104,8 @@ services:
     restart: always
     networks:
       - inception-network
-    expose:
-      - "80"
+    ports:
+      - "8082:80"
 
   cadvisor:
     image: ghcr.io/google/cadvisor:0.54.0
@@ -126,7 +126,7 @@ services:
     networks:
       - inception-network
         
-    #### ------------BONUS SERVICES -------------- ######
+    #### ------------BONUS SERVICES END -------------- ######
 
 volumes:
 
@@ -151,15 +151,11 @@ networks:
 secrets:
   db_root_password:
     file: ../secrets/db_root_password.txt
-
   db_user_password:
     file: ../secrets/db_user_password.txt
-
   wp_admin_password:
     file: ../secrets/wp_admin_password.txt
-
   wp_user_password:
     file: ../secrets/wp_user_password.txt
-
   ftp_user_password:
     file: ../secrets/ftp_user_password.txt

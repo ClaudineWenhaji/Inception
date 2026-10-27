@@ -26,7 +26,7 @@ define( 'DB_HOST', '${DB_HOST}' );
 define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );
 
-/* Bonus  --- REDIS Cache Integration --- FICHIER DE CONF AVEC CONNEXION AU SERVICE REDIS SUR PORT 6379 */
+/* Bonus  --- REDIS Cache Integration --- FICHIER DE CONFIGURATION AVEC CONNEXION AU SERVICE REDIS SUR PORT 6379 */
 
 define( 'WP_REDIS_HOST', 'redis' );
 define( 'WP_REDIS_PORT', 6379 );
